@@ -1,0 +1,110 @@
+.card.container {
+  margin: 50px 0 0 100px;
+  flex: auto;
+}
+
+.card {
+  min-width: 200px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
+  margin-top: 20px;
+  margin-left: 20px;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  max-width: 340px;
+}
+
+.card .card-cover {
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px 10px 0px 0px;
+  color: white;
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+}
+
+.card-content {
+  padding: 0 10px;
+  width: 100%;
+}
+
+.card .card-title {
+  margin-bottom: auto;
+  text-align: center;
+  height: 5rem;
+}
+
+.card a {
+  margin: auto;
+  text-align: center;
+}
+
+.card .img-thumbnail {
+  border: none;
+}
+
+.card.wide .card-cover .left, .card.wide .card-cover .right {
+  width: 160px;
+  float: left;
+}
+
+.card .card-cover .count {
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 0 0;
+}
+
+.card .card-cover .title {
+  font-size: 12px;
+  text-align: center;
+}
+
+.card .body {
+  height: 60px;
+  border-radius: 0 0 10px 10px;
+  color: #333333;
+  background-color: white;
+}
+
+.card .body .title {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 2%;
+}
+
+.card.wide .body .card-title {
+  padding: 4%;
+}
+
+.card.div-project  .body {
+  background-color: white;
+}
+
+.card-description {
+  padding-bottom: 10px;
+  align-self: flex-end;
+  width: 100%;
+  overflow: clip;
+}
+
+.card .div-read-more {
+  text-align: center;
+  align-items: baseline;
+  display: flex;
+  margin-top: auto;
+  border-top: 1px solid #6b6b6b;
+  padding: 1rem;
+}
+
+.card .div-read-more:hover {
+  background-color: #afafaf;
+  font-weight:bold;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.img-thumbnail {
+  max-height: 200px;
+}

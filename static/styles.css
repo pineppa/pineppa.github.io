@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+.main {
+  margin: 0px auto;
+}
+
+hr {
+  margin: .25rem 0;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  font-weight: bold;
+  -webkit-transition: background 0.2s ease-in-out;
+  -moz-transition: background 0.2s ease-in-out;
+  -o-transition: background 0.2s ease-in-out;
+  transition: background 0.2s ease-in-out;
+  z-index: 999;
+}
+
+.navbar .nav-link {
+  color: white;
+}
+
+.navbar-brand {
+  color: white;
+  font-weight: bold;
+}
+.navbar-brand:hover {
+  color: white;
+}
+
+.navbar li ul {
+  display: none;
+}
+
+.content {
+  max-width: 72rem;
+}
+
+.entry {
+  background-image: url("media/background.jpg");
+  background-size: cover;
+  color: aliceblue;
+}
+
+.banner {
+  padding-top: 10rem;
+}
+
+.banner-img img {
+  max-height: 240px;
+}
+
+.btn-container {
+  width: 66.6666%;
+}
+
+.img-skills {
+  border-right: 2px black solid;
+  padding: 6px 6px 6px 0px;
+  max-height: 48px;
+  height: auto;
+}
+
+.btn-skills {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 0px 6px;
+  border-radius: 8px;
+  border: 2px #000b solid;
+  gap: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: border 0.3s ease-in-out;
+}
+
+.btn:hover{
+  box-shadow: 0 2px 8px #888;
+  background-color: #fffb;
+}
+
+.know-more {
+  padding: 0.25rem 2rem;
+  min-width: 600px;
+}
+
+.text-border {
+  color: transparent;
+  background: linear-gradient(45deg, #f06, #075cc9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-transform: uppercase;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.content-description {
+  padding: 2rem 5%;
+}
+
+.content-description h1,
+.content-description h2,
+.content-description h3 {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.img-about {
+  max-height: 100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.img-about-container{
+  max-width: 24%;
+}
+
+/*responsive*/
+@media (max-width: 1170px) {
+  .main {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .footer-col {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  #project-filter {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 574px) {
+  .footer-col {
+    width: 100%;
+    text-align: center;
+  }
+}
