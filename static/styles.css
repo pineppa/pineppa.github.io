@@ -98,7 +98,7 @@ hr {
   text-transform: uppercase;
 }
 
-.navbar-container container {
+.navbar-container {
   display: flex;
   justify-content: space-evenly;
   align-content: center;
