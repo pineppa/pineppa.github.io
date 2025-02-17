@@ -51,7 +51,7 @@ hr {
 }
 
 .banner {
-  padding-top: 10rem;
+  padding-top: 10vw;
 }
 
 .banner-img img {
@@ -98,10 +98,10 @@ hr {
   text-transform: uppercase;
 }
 
-.row {
+.navbar-container container {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
+  align-content: center;
 }
 
 .content-description {
@@ -130,22 +130,21 @@ hr {
   .main {
     width: 100%;
   }
+
+  .banner-img {
+    display: none !important;
+  }
+
+  .banner-text {
+    width: 65%;
+    margin: 0 auto;
+    text-shadow: 0 1px 3px #000;
+  }
 }
 
 @media (max-width: 767px) {
-  .footer-col {
-    width: 50%;
-    margin-bottom: 30px;
-  }
 
   #project-filter {
     margin: 0 auto;
-  }
-}
-
-@media (max-width: 574px) {
-  .footer-col {
-    width: 100%;
-    text-align: center;
   }
 }
