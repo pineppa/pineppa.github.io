@@ -36,6 +36,11 @@ hr {
   color: white;
 }
 
+.navbar-collapse {
+  display: flex !important;
+  flex-basis: auto;
+}
+
 .navbar li ul {
   display: none;
 }
@@ -83,11 +88,11 @@ hr {
 .btn:hover{
   box-shadow: 0 2px 8px #888;
   background-color: #fffb;
+  color: #000;
 }
 
 .know-more {
   padding: 0.25rem 2rem;
-  min-width: 600px;
 }
 
 .text-border {
@@ -123,6 +128,12 @@ hr {
 
 .img-about-container{
   max-width: 24%;
+  min-width: 150px;
+}
+
+#img-container-x,
+#img-container-pvcase {
+  min-width: 80px;
 }
 
 /*responsive*/

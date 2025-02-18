@@ -16,19 +16,6 @@ var navbarInit = function navbarInit() {
       document.addEventListener('scroll', function () {
         return handleAlpha();
       }); // Top navigation background toggle on mobile
-  
-      navbar.addEventListener('show.bs.collapse', function (e) {
-        e.currentTarget.classList.toggle('bg-dark');
-      });
-      navbar.addEventListener('hide.bs.collapse', function (e) {
-        e.currentTarget.classList.toggle('bg-dark');
-      });
-    }
-  
-    if (navBurger) {
-      navBurger.addEventListener('click', function () {
-        navBurger.classList.toggle('is-active');
-      });
     }
   };
 
