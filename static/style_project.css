@@ -7,10 +7,10 @@
     border-radius: 1rem;
     box-shadow: 0 1rem 4rem #0003;
     background-color: #fff;
-    width: 100%;
-    min-height: 100px;
+    min-width: 550px;
+    min-height: 4rem;
     position: relative;
-    margin-top: -6.5rem;
+    margin-top: -4rem;
     margin-bottom: 2.5rem;
 } 
 
