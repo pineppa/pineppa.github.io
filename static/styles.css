@@ -63,6 +63,10 @@ hr {
   max-height: 240px;
 }
 
+.banner-text{
+  text-shadow: 0 1px 3px #000;
+}
+
 .btn-container {
   width: 66.6666%;
 }
@@ -149,7 +153,6 @@ hr {
   .banner-text {
     width: 65%;
     margin: 0 auto;
-    text-shadow: 0 1px 3px #000;
   }
 }
 
