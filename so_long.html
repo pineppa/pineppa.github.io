@@ -34,19 +34,11 @@
     <link rel="stylesheet" type="text/css" href="./static/styles.css" />
     <link rel="stylesheet" type="text/css" href="./static/footer.css" />
 
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./static/style_card.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="./static/style_project.css"
-    />
+    <link rel="stylesheet" type="text/css" href="./static/style_card.css" />
+    <link rel="stylesheet" type="text/css" href="./static/style_project.css" />
   </head>
   <body class="d-flex flex-column min-vh-100">
-        <nav
+    <nav
       class="navbar navbar-expand-md main-nav"
       data-navbar-dark-on-scroll="data-navbar-dark-on-scroll"
       style="background-color: rgba(36, 38, 43, 0)"
@@ -100,7 +92,7 @@
             <div
               class="project-categories col-md-8 d-flex mx-auto justify-content-evenly"
             >
-              <b>It</b>
+              <b>Programming</b>
             </div>
           </div>
           <div
@@ -121,27 +113,52 @@
         <h2 class="project-description-title">Project description</h2>
         <div class="project-description content-description text-start mx-auto">
           <div>
+            <h1 id="so-long-and-thanks-for-all-the-fish">
+              So long... and thanks for all the fish
+            </h1>
             <p>
               So long (and thanks for all the fish) is a very small 2D game with
               the purpose to make you work with textures, sprites, and some
-              other very basic gameplay elements.
+              other very basic gameplay elements. For more: <a href="https://github.com/pineppa/42_2_so_long">GitHub repo</a>.
             </p>
-            <h2>The Game</h2>
+            <h2 id="table-of-content">Table of Content</h2>
             <ul>
               <li>
-                Implement movement functions that are associated to WASD keys to
-                catch the 4 different movement directions;
+                <a href="#the-rules-of-the-game">The rules of the game</a>;
               </li>
-              <li>The player cannot move through walls;</li>
-              <li>The number of movement must be displayed in the shell</li>
-              <li>Must use a 2D view (top-down or profile)</li>
+              <li><a href="#graphics-management">Graphics management</a>;</li>
+              <li><a href="#map">Map</a>;</li>
               <li>
-                Game does not need to be real time (Does it mean it can load a
-                series of instructions?)
+                The code organization:
+                <ul>
+                  <li><a href="#programme-input">Programme input</a>;</li>
+                  <li><a href="#init-resources">Init Resources</a>;</li>
+                  <li><a href="#key-hooks">Key Hooks</a>;</li>
+                  <li><a href="#movements">Movements</a>;</li>
+                </ul>
               </li>
             </ul>
-
-            <h2>Graphics management</h2>
+            <h2 id="the-minlibx-library">The MinLibX library</h2>
+            <p>
+              This is a graphical engine developed by the school. The project
+              has been developed as homework in Linux. Modified for MacOS for
+              school submission.
+            </p>
+            <h2 id="the-rules-of-the-game">The rules of the game</h2>
+            <ul>
+              <li>
+                Implement movement functions that are associated to
+                <code>W A S D</code> keys to catch the 4 different movement
+                directions;
+              </li>
+              <li>The player cannot move through walls;</li>
+              <li>The number of movement must be displayed in the shell;</li>
+              <li>Must use a 2D view (top-down or profile);</li>
+              <li>
+                Game does not need to be real time (Can be a turned based one).
+              </li>
+            </ul>
+            <h2 id="graphics-management">Graphics management</h2>
             <ul>
               <li>The image must be displayed in a window;</li>
               <li>
@@ -149,41 +166,41 @@
                 window, minimize, ...);
               </li>
               <li>
-                ESC and the window X should close the window and the program in
-                a clean way;
+                <code>ESC</code> and the window X should close the window and
+                the program in a clean way;
               </li>
-              <li>The use of the images of the MiniLibX is mandatory.</li>
+              <li>
+                The use of the <code>images</code> of the MiniLibX is mandatory.
+              </li>
             </ul>
-
-            <h2>Map</h2>
-            <p>The map has to be constructed with 3 components:</p>
+            <h2 id="map">Map</h2>
             <ul>
-              <li>Walls,</li>
-              <li>Collectibles,</li>
-              <li>Empty space.</li>
+              <li>
+                The map has to be constructed with 3 components: walls,
+                collectibles, and free space.
+              </li>
+              <li>
+                <p>The map can be composed of only these 5 (6) characters:</p>
+                <ul>
+                  <li><code>0</code> for an ground space,</li>
+                  <li><code>1</code> for a wall,</li>
+                  <li><code>C</code> for a collectible,</li>
+                  <li><code>E</code> for a map exit,</li>
+                  <li>
+                    <code>P</code> for the player&#39;s starting position.
+                  </li>
+                  <li><code>D</code> for the enemies (<em>bonus</em>)</li>
+                </ul>
+              </li>
+              <li>
+                <p>
+                  The map must contain 1 exit, at least 1 collectible, and 1
+                  starting position to be valid. If the map contains a
+                  duplicates characters (exit/start), the program should display
+                  an error message.
+                </p>
+              </li>
             </ul>
-
-            <p>The map can be composed only by these 5 characters:</p>
-            <ul>
-              <li><code>0</code> for an ground space,</li>
-              <li><code>1</code> for a wall,</li>
-              <li><code>C</code> for a collectible,</li>
-              <li><code>E</code> for a map exit,</li>
-              <li><code>P</code> for the player's starting position.</li>
-            </ul>
-
-            <p>To be valid, the map must contain:</p>
-            <ul>
-              <li>1 exit,</li>
-              <li>At least 1 collectible,</li>
-              <li>1 starting position</li>
-            </ul>
-            <br />
-            <p>
-              If the map contains a duplicates characters (exit/start), you
-              should display an error message.
-            </p>
-
             <p>Here is a simple valid map:</p>
             <p>
               <code>1111111111111</code><br />
@@ -198,13 +215,13 @@
                 The map must be closed/surrounded by walls. If it is not, the
                 program must return an error.
               </li>
-              <li>You have to check if there's a valid path in the map.</li>
+              <li>There must be a valid path in the map.</li>
               <li>
-                You must be able to parse any kind of map, as long as it
+                The user should be able to parse any kind of map, as long as it
                 respects the above rules.
               </li>
+              <li>Another example of a minimal <code>.ber</code> map:</li>
             </ul>
-            <p>Another example of a minimal .ber map:</p>
             <p>
               <code>1111111111111111111111111111111111</code><br />
               <code>1E0000000000000C00000C000000000001</code><br />
@@ -213,75 +230,143 @@
               <code>1P0000000C00C0000000000000000000C1</code><br />
               <code>1111111111111111111111111111111111</code><br />
             </p>
-
-            <p>
-              If any misconfiguration of any kind is encountered in the file,
-              the program must exit in a clean way, and return
-              <code>"Error\n"</code> followed by an explicit error message of
-              your choice
+            <ul>
+              <li>
+                If any misconfiguration of any kind is encountered in the file,
+                the program must exit in a clean way, and return
+                <code>&quot;Error\n&quot;</code> followed by an explicit error
+                message of your choice
+              </li>
+            </ul>
+            <p style="text-align: right">
+              <a href="#so-long-and-thanks-for-all-the-fish"> Go to the top </a>
             </p>
 
-            <p>Text to be checked before being included</p>
+            <h1 id="the-code-organization">The code organization</h1>
+            <h2 id="programme-input">Programme input</h2>
             <p>
-              <code>map->map_size</code> tells how big the matrix of map is.
+              The program must be passed the map to be used for the game. The
+              code sequentially:
+            </p>
+            <ul>
+              <li>Checks the presence of the additional argument;</li>
+              <li>
+                Checks that the file is properly formatted as <code>.ber</code>;
+              </li>
+            </ul>
+            <p>
+              <code>map-&gt;map_size</code> tells how big the matrix of map is.
               This should be used to manage the content in the window;
             </p>
+            <h2 id="check-the-map">Check the map</h2>
             <ul>
               <li>
-                To be checked if the window can be set with a minimum and
-                maximum size...
+                Checks the map to:
+                <ul>
+                  <li>Be of rectangular shape</li>
+                  <li>The whole perimeter is closed with a wall;</li>
+                  <li>
+                    Go through map and load every location with the specific
+                    image required:
+                  </li>
+                  <li>
+                    There is a valid path:
+                    <ul>
+                      <li>
+                        Use a flooding algorithm, with a block on Exit to ensure
+                        the collectibles are not hidden;
+                      </li>
+                    </ul>
+                  </li>
+                  <li>Each component has only 1 Player and Exit;</li>
+                </ul>
               </li>
-              <li>How should the images be handled not to be stretched?</li>
-              <li>Should the background be loaded as a single image?</li>
             </ul>
-            <p>
-              Go through map and load every location with the specific image
-              required:
+            <p style="text-align: right">
+              <a href="#so-long-and-thanks-for-all-the-fish"> Go to the top </a>
             </p>
+
+            <h2 id="init-resources">Init resources</h2>
             <ul>
-              <li><code>0</code> Loads the ground space;</li>
-              <li><code>1</code> Loads the Wall image;</li>
               <li>
-                <code>E</code>, <code>C</code>, <code>P</code> loads a ground
-                space as background plus the specific image that represents the
-                Exit, a Collectible, or the Player;
+                Initiate the graphic connection to the display and retrieve the
+                screen size;
+              </li>
+              <li>
+                Checks that the map fits in the screen (Map movement is a
+                possible future update)
+              </li>
+              <li>
+                Create a new window:
+                <ul>
+                  <li>
+                    Initialize objects information and throws an error if the
+                    specified file is missing
+                  </li>
+                </ul>
+              </li>
+              <li>
+                Draw the map:
+                <ul>
+                  <li><code>0</code> Loads the Ground space;</li>
+                  <li><code>1</code> Loads the Wall image;</li>
+                  <li>
+                    <code>E C P</code> loads an ground space as background plus
+                    the specific image that represents the Exit, a Collectible,
+                    or the Player;
+                  </li>
+                </ul>
               </li>
             </ul>
-            <p>Public code coming soon!</p>
+            <p style="text-align: right">
+              <a href="#so-long-and-thanks-for-all-the-fish"> Go to the top </a>
+            </p>
+            <h3 id="movements">Movements</h3>
+            <p>
+              The settings allow to use two different sets for movement:
+              <code>UP</code>, <code>LEFT</code>, <code>DOWN</code>,
+              <code>RIGHT</code> and <code>W</code>, <code>A</code>,
+              <code>S</code>, <code>D</code>
+            </p>
+            <p>
+              <code>ESC</code> is assigned to close the game window directly
+            </p>
+            <p style="text-align: right">
+              <a href="#so-long-and-thanks-for-all-the-fish"> Go to the top </a>
+            </p>
           </div>
         </div>
       </div>
     </div>
     <footer class="footer mt-4 bg-black">
       <div class="footer-container d-flex container">
-          <div class="footer-col">
-            <h4>Photocatalysta</h4>
-            <ul>
-              <li><a href="./index.html">Home</a></li>
-            </ul>
-          </div>
+        <div class="footer-col">
+          <h4>Photocatalysta</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+          </ul>
+        </div>
 
+        <div class="footer-col">
+          <h4>Contact me</h4>
+          <ul>
+            <li><a href="./about.html">Contacts</a></li>
+          </ul>
+        </div>
 
-          <div class="footer-col">
-            <h4>Contact me</h4>
-            <ul>
-              <li><a href="./about.html">Contacts</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>follow me</h4>
-            <div class="social-links">
-              <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a> -->
-              <a href="https://github.com/pineppa" target="_blank"
-                ><i class="fa-brands fa-github"></i
-              ></a>
-              <a href="https://www.instagram.com/jacopo3sala/" target="_blank"
-                ><i class="fa-brands fa-instagram"></i
-              ></a>
-              <a href="https://www.linkedin.com/in/jacopo3sala/" target="_blank"
-                ><i class="fa-brands fa-linkedin-in"></i
-              ></a>
+        <div class="footer-col">
+          <h4>follow me</h4>
+          <div class="social-links">
+            <!-- <a href="#"><i class="fa-brands fa-facebook"></i></a> -->
+            <a href="https://github.com/pineppa" target="_blank"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+            <a href="https://www.instagram.com/jacopo3sala/" target="_blank"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/jacopo3sala/" target="_blank"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
           </div>
         </div>
       </div>
